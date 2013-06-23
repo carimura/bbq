@@ -94,15 +94,17 @@ Non-deleted but fetched jobs are returned to the queue when the script ends.
 
 ### IronMQQueue
 
+[IronMQ](http://iron.io/mq) is a highly available queue service provided by [Iron.io](http://iron.io). It is fast, reliable, and easy to use.
+
     $ironMQ = new \IronMQ(array(
         'token' => 'YOUR_IRONMQ_TOKEN',
         'project_id' => 'YOUR_IRONMQ_PROJECT_ID'
     ));
     $queue = new IronMQQueue('queue_id', $ironMQ, 'queue_name');
 
-IronMQQueue accesses Iron.io's IronMQ service over HTTP(S) Interface.
+IronMQQueue accesses Iron.io's [IronMQ](http://iron.io/mq) service over HTTP(S) Interface.
 
-Non-deleted but fetched jobs are returned to the queue if they are not deleted after timeout has passed. The timeout
+Non-deleted but fetched jobs are returned to the queue if they are not deleted after the timeout has passed. The timeout
 is 60 seconds my default.
 
 ### Array Queue
